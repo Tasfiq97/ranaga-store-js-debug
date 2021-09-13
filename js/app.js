@@ -145,7 +145,7 @@ const showTotalInModal=()=>{
  else{
  document.getElementById("total-cost").innerHTML=`
  your total cost is :$ ${modalTotal}
- <p class="text-center">your purchase is done</p>
+ <p class="text-center">Thank you for purchasing!!</p>
  `;
  }
 }
