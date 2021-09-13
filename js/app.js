@@ -1,8 +1,9 @@
 const loadProducts = () => {
-  const url = `https://fakestoreapi.com/products`;
+  const url=`https://fakestoreapi.com/products`
   fetch(url)
-    .then((response) => response.json())
-    .then((data) => showProducts(data));
+  .then(res=>res.json())
+  .then(data=>showProducts(data))
+  
 };
 loadProducts();
 
@@ -111,6 +112,7 @@ const detailBtn=(detailId)=>{
 // detail show in card function 
 
 const showDetails=(detailInfo)=>{
+  console.log(detailInfo);
   document.getElementById("show-detail").textContent="";
 const div=document.createElement("div");
 
@@ -119,6 +121,7 @@ div.innerHTML=`
   <img src="${detailInfo.image}" class="card-img-top img-fluid w-50" alt="...">
   <div class="card-body">
     <h5 class="card-title">${detailInfo.title}</h5>
+    <p class="card-title">Category: ${detailInfo.category}</p>
     <p class="card-text">${detailInfo.description}</p>
    
   </div>
@@ -146,3 +149,6 @@ const showTotalInModal=()=>{
  `;
  }
 }
+
+
+
